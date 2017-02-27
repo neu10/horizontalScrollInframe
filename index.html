@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Steamy in iphone</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- Bootstrap -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <link href="vendor/frame-carousel/jquery.frame-carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+<body data-spy="scroll" data-target="#navbar-top">
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+
+<div class="container-fluid">
+    <div class="row row-section row-demo" id="demo">
+
+        <div class="col-md-7">
+            <h2>Some dummy text</h2>
+            <p>
+                Are you tired of calling the waiter to bring you the menu and before you could order any food?? Steamy provides you with an alternative worth trying.
+            </p>
+            <div id="pageContent"></div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="fc-portrait"></div>
+        </div>
+
+        <!--
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="fc-landscape"></div>
+        </div>-->
+
+    </div>
+
+
+    <div class="row row-section row-footer">
+        <div class="col-lg-8 col-lg-offset-2">
+            <div class="clearfix">
+                <h5 class="pull-left">&copy; 2017 - Developed by folks at <a href="http://www.cretechs.com"
+                                                                            target="_blank">Cretechs</a></h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="vendor/jquery-1.11.3.min.js"><\/script>')</script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/frame-carousel/jquery.frame-carousel.js"></script>
+<script src='js/css3-animate-it.js'></script>
+<script src='js/jquery.easing.js'></script>
+
+
+<script type="text/javascript">
+    $(function () {
+
+        $("body").keydown(function(e) {
+            if(e.keyCode == 37) { // left
+                console.log('key event 37 left arrow');
+                $(".fc-btn-left").click();
+            }
+            else if(e.keyCode == 39) { // right
+                console.log('key event 39 right arrow');
+                $(".fc-btn-right").click();
+            }
+        });
+
+        $('.fc-portrait').frameCarousel({
+            frame: 'img/iphone_6_silver.png',
+            boundingBox: {
+                left: '6.5%',
+                top: '12.2%',
+                width: '86.8%',
+                height: '75.3%'
+            },
+            frameSize: [{
+                width: 300
+            }],
+            controlsPosition: {
+                top: '45%'
+            }
+        });
+    });
+</script>
+</body>
+</html>
