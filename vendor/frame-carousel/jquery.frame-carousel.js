@@ -138,14 +138,16 @@
         frame: dirSample + 'frame.png',
         frameSize: [{width: 600, minScreenWidth: 1200},
           {width: 500, maxScreenWidth: 1199, minScreenWidth: 768},
-          {width: 300, maxScreenWidth: 767}],
+          {width: 300, maxScreenWidth: 767},
+          {width: 250, maxScreenWidth: 480}
+          ],
         boundingBox: {
           left: '4.3%',
           top: '4.48%',
           width: '91.4%',
           height: '61.1%'
         },
-        collapseThreshold: 450,
+        collapseThreshold: 250,
         images: (function(){ return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18].map(function(n){ return dirSample + n + '.jpg'; }); })(),
         controlsPosition: {
           top: '35%'
