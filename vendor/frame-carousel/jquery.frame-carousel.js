@@ -130,8 +130,7 @@
         .replace('jquery.frame-carousel.min.js', '')+
         'sample/';
 
-       console.log('dirSample: '+dirSample);
-       dirSample = "img/";
+       console.log('dirSample: '+dirSample+" "+this.options);
       this.options = $.extend({
         first: 0,
         debug: false,

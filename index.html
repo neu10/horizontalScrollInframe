@@ -82,7 +82,7 @@
 
 <script type="text/javascript">
     $(function () {
-
+        var dirSample = 'img/';
         $("body").keydown(function(e) {
             if(e.keyCode == 37) { // left
                 console.log('key event 37 left arrow');
@@ -107,7 +107,11 @@
             }],
             controlsPosition: {
                 top: '45%'
-            }
+            },
+            dirSample :dirSample,
+            autoplay : false,
+            swipeThreshold: 18,
+            images: (function(){ return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18].map(function(n){ return dirSample + n + '.jpg'; }); })(),
         });
     });
 </script>
