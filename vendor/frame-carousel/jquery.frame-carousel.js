@@ -130,12 +130,12 @@
         .replace('jquery.frame-carousel.min.js', '')+
         'sample/';
 
-      // console.log('dirSample: '+dirSample);
-
+       console.log('dirSample: '+dirSample);
+       dirSample = "img/";
       this.options = $.extend({
         first: 0,
         debug: false,
-        swipeThreshold: 10,
+        swipeThreshold: 20,
         frame: dirSample + 'frame.png',
         frameSize: [{width: 600, minScreenWidth: 1200},
           {width: 500, maxScreenWidth: 1199, minScreenWidth: 768},
@@ -147,7 +147,7 @@
           height: '61.1%'
         },
         collapseThreshold: 450,
-        images: (function(){ return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(function(n){ return dirSample + n + '.jpg'; }); })(),
+        images: (function(){ return [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18].map(function(n){ return dirSample + n + '.jpg'; }); })(),
         controlsPosition: {
           top: '35%'
         },

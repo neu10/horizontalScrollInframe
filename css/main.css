@@ -294,6 +294,16 @@ a:hover {
   margin: 0;
   font-size: 12px;
 }
+
+.row-footer{
+  background-color: #dddddd;
+}
+.description img{
+  position: relative;
+  top:14px;
+  width: 45px;
+}
+
 @media (max-width: 400px) {
   .row-section.row-footer p.badges {
     display: none;
@@ -361,7 +371,8 @@ a:hover {
   background: #fff;
 }
 .navbar-default .navbar-nav > li > a {
-  font-weight: 300;
+  font-weight: 800;
+  font-size: 24px;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
