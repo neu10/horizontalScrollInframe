@@ -66,7 +66,7 @@
     </div>
 
 
-    <div class="row row-section row-footer footer-margin">
+    <div class="row row-section row-footer">
         <div class="col-lg-8 col-lg-offset-2">
             <div class="clearfix">
                 <h5 class="pull-left">&copy; 2017 - Developed by folks at <a href="http://www.cretechs.com"
@@ -83,6 +83,20 @@
 
 
 <script type="text/javascript">
+
+    /* ======= Fixed header when scrolled ======= */
+    $(window).on('scroll load', function() {
+
+        if ($(window).scrollTop() > 0) {
+            $('#navbar-top').addClass('hidden');
+        }
+        else {
+            $('#navbar-top').removeClass('hidden');
+
+        }
+    });
+
+
     $(function () {
         var dirSample = 'img/';
         $("body").keydown(function(e) {
