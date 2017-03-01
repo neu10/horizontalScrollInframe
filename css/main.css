@@ -380,3 +380,7 @@ a:hover {
   background-color: transparent;
   color: #ff357a;
 }
+
+.slide-text{
+  font-size:16px;
+}
