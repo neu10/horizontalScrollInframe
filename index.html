@@ -26,111 +26,46 @@
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-<!--            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>-->
+            <!--            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>-->
             <a class="navbar-brand" href="#" style="font-size: 30px">Cleo App Demo</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
-<!--        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-            </ul>
-        </div>-->
+        <!--        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                    </ul>
+                </div>-->
 
         <!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
 <!-- Add your site or application content here -->
 
-<div class="container-fluid content-body" id="demo">
-    <div class="row row-section row-demo">
+<div style="margin-top: 70px;">
+    <h1>Home Page</h1>
 
-
-        <div class="col-md-7" id="innerdiv">
-            <div id="pageContent"></div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="fc-portrait"></div>
-        </div>
-
-        <!--
-        <div class="col-lg-8 col-lg-offset-2">
-            <div class="fc-landscape"></div>
-        </div>-->
-
-    </div>
-
-
-    <div class="row row-section row-footer">
-        <div class="col-lg-8 col-lg-offset-2">
-            <div class="clearfix">
-                <h5 class="pull-left">&copy; 2017 - Developed by folks at <a href="http://www.cretechs.com"
-                                                                            target="_blank">Cretechs</a></h5>
-            </div>
-        </div>
-    </div>
+    <button onclick="demoClicked()">
+        <a href="appdemo.html">Launch App demo</a>
+    </button>
 </div>
+
+<script type="text/javascript">
+    function demoClicked() {
+        $(".fc-btn-left").click();
+        $('#innerdiv').addClass('col-md-7');
+        $('.fc-portrait').removeClass('hidden');
+    }
+</script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="vendor/jquery-1.11.3.min.js"><\/script>')</script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/frame-carousel/jquery.frame-carousel.js"></script>
-
-
-<script type="text/javascript">
-
-    /* ======= Fixed header when scrolled ======= */
-    $(window).on('scroll load', function() {
-
-        if ($(window).scrollTop() > 0) {
-            $('#navbar-top').addClass('hidden');
-        }
-        else {
-            $('#navbar-top').removeClass('hidden');
-
-        }
-    });
-
-
-    $(function () {
-        var dirSample = 'img/';
-        $("body").keydown(function(e) {
-            if(e.keyCode == 37) { // left
-                console.log('key event 37 left arrow');
-                $(".fc-btn-left").click();
-            }
-            else if(e.keyCode == 39) { // right
-                console.log('key event 39 right arrow');
-                $(".fc-btn-right").click();
-            }
-        });
-
-        $('.fc-portrait').frameCarousel({
-            frame: 'img/iphone_6_silver.png',
-            boundingBox: {
-                left: '6.5%',
-                top: '12.2%',
-                width: '86.8%',
-                height: '75.3%'
-            },
-            frameSize: [{
-                width: 280
-            }],
-            controlsPosition: {
-                top: '45%'
-            },
-            dirSample :dirSample,
-            autoplay : false,
-            swipeThreshold: 9,
-            images: (function(){ return [1,2,3,4,5,6,7,8,9].map(function(n){ return dirSample + n + '.jpg'; }); })(),
-        });
-    });
-</script>
 </body>
 </html>
